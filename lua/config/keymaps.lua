@@ -17,7 +17,7 @@ vim.keymap.set("n", "l", "r", { silent = true })
 -- Sacrifice c (delete and insert [motion]), and remap k to none
 vim.keymap.set("n", "k", "", {})
 -- Remap cc (delete [count lines] and insert) to kk
-vim.keymap.set("n", "kk", "cc", {})
+vim.keymap.set("n", "kk", "cc", { silent = true })
 
 -- Modify the <C-x> as well
 vim.keymap.set("n", "<C-c>", "<C-w>h", { desc = "Go to left window", remap = true })
@@ -37,5 +37,7 @@ vim.keymap.set("i", "<A-s>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move up" })
 vim.keymap.set("v", "<A-t>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
 vim.keymap.set("v", "<A-s>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
 
--- Leave insert mode by tapping qq
-vim.keymap.set("i", "qq", "<Esc>", { silent = true })
+-- Leave insert mode by tapping àà
+vim.keymap.set("i", "àà", "<Esc>", { silent = true })
+-- Save with <C-q>
+vim.keymap.set({ "n", "i" }, "<C-q>", "<cmd>w<cr><Esc>", { silent = true })
