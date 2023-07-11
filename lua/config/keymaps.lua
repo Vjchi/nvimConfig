@@ -26,8 +26,8 @@ vim.keymap.set("n", "<C-s>", "<C-w>k", { desc = "Go to upper window", remap = tr
 vim.keymap.set("n", "<C-r>", "<C-w>l", { desc = "Go to right window", remap = true })
 
 -- Modify the <S-x> as well
-vim.keymap.set("n", "<S-r>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
-vim.keymap.set("n", "<S-c>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
+vim.keymap.set("n", "<S-c>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
+vim.keymap.set("n", "<S-r>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 
 -- Move Lines
 vim.keymap.set("n", "<A-t>", "<cmd>m .+1<cr>==", { desc = "Move down" })
@@ -38,4 +38,4 @@ vim.keymap.set("v", "<A-t>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
 vim.keymap.set("v", "<A-s>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
 
 -- Leave insert mode by tapping qq
-vim.keymap.set("i", "qq", "<ESC>", { silent = true })
+vim.keymap.set("i", "qq", "<Esc>", { silent = true })
